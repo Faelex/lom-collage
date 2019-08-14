@@ -12,7 +12,7 @@
         <a href="/demo" target="_blank" class="button--green">
           Dropping
         </a>
-        <a href="/windows" target="_blank" class="button--grey">
+        <a href="/window" target="_blank" class="button--grey">
           Windows
         </a>
         <a href="/resize" target="_blank" class="button--grey">
