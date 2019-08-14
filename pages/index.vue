@@ -9,15 +9,14 @@
         Draggable LOM Data UI to view and build digital Collages
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
+        <a href="/demo" target="_blank" class="button--green">
+          Dropping
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
+        <a href="/windows" target="_blank" class="button--grey">
+          Windows
+        </a>
+        <a href="/resize" target="_blank" class="button--grey">
+          Resize
         </a>
       </div>
     </div>
