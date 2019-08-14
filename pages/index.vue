@@ -18,6 +18,9 @@
         <a href="/resize" target="_blank" class="button--grey">
           Resize
         </a>
+        <a href="/inputs" target="_blank" class="button--grey">
+          Inputs
+        </a>
       </div>
     </div>
   </div>
