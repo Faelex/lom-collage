@@ -30,7 +30,7 @@ export default {
   plugins: [
     '@/plugins/antd-ui',
     { src: '@/plugins/repos', ssr: false },
-    { src: '@/plugins/lom-window', ssr: false },
+    { src: '@/plugins/lom-window', ssr: true },
     { src: '@/plugins/client-init.js', ssr: false }
   ],
   /*
@@ -59,6 +59,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.externals = config.externals || []
+      config.externals.push({
+        Vue: 'vue'
+      })
+    }
   }
 }

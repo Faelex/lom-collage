@@ -6,7 +6,7 @@
         lom-collage
       </h1>
       <h2 class="subtitle">
-        Draggable LOM Data UI to view annd build digital Collages
+        Draggable LOM Data UI to view and build digital Collages
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">

@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@dev7ch/vue-lom-window": "^0.0.4",
+    "@dev7ch/vue-lom-window": "^0.0.7",
     "@nuxtjs/axios": "^5.3.6",
     "ant-design-vue": "^1.1.10",
     "nuxt": "^2.0.0"
