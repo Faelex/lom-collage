@@ -7,7 +7,9 @@ export default {
   },
 
   getCover(id) {
-    return Repository.get(`${resource}/${id}?fields=cover.data.thumbnails`)
+    return Repository.get(`${resource}/${id}?fields=cover.data`).then((res) => {
+      return res.data.data.cover
+    })
   },
 
   getProject(id, params = null) {

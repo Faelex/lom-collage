@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import LomWindow from '@dev7ch/vue-lom-window/lib/index.js'
+import LomWindow from '@dev7ch/lom-windows/src/index'
 
 Vue.use(LomWindow)

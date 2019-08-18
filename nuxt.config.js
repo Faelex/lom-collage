@@ -30,7 +30,7 @@ export default {
   plugins: [
     '@/plugins/antd-ui',
     { src: '@/plugins/repos', ssr: false },
-    { src: '@/plugins/lom-window', ssr: true },
+    { src: '@/plugins/lom-window', ssr: false },
     { src: '@/plugins/client-init.js', ssr: false },
     { src: '@/plugins/draggable.js', ssr: false },
     { src: '@/plugins/zoomer.js', ssr: false }

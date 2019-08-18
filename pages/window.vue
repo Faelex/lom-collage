@@ -6,6 +6,7 @@
           v-for="(item, idx) in projects"
           :key="idx"
           :width="220"
+          :is-scrollable="true"
           :title="item.data.title"
           :resizable="true"
           :min-width="250"
@@ -16,8 +17,23 @@
           :is-open.sync="isOpen[idx]"
         >
           <div class="lom window-content">
-            {{ item.cover }}
-            <img :key="idx + '-image'" :src="getImage(item.data.id)" />
+            <img
+              :key="idx + '-image'"
+              ondragstart="event.preventDefault();
+                        event.stopPropagation();"
+              :src="item.cover"
+            />
+            <a-collapse>
+              <a-collapse-panel key="1" header="This is panel header 1">
+                <p
+                  v-html="
+                    item.data.abstract
+                      ? item.data.abstract.slice(0, 300)
+                      : item.data.text.slice(0, 10)
+                  "
+                ></p> </a-collapse-panel
+              >>
+            </a-collapse>
             <p
               v-html="
                 item.data.abstract
@@ -41,6 +57,7 @@ export default {
   name: 'Example',
   data() {
     return {
+      activityKey: 0,
       projects: [],
       covers: {},
       style: null,
@@ -56,9 +73,9 @@ export default {
     }
   },
 
-  mounted() {
+  created() {
     this.fetch(this.$store.state.api.projects)
-    this.$nextTick(() => this.applyImages)
+    // this.$nextTick(() => this.applyImages)
     /* for (let i = 0; i < this.projects.length; i++) {
       const index = this.newDialog(i) - 1
       console.log(index)
@@ -71,7 +88,7 @@ export default {
       for (let i = 0; i < data.length; i++) {
         this.projects.push({
           data: { ...data[i] },
-          cover: null,
+          cover: this.getImage(data[i].id),
           options: {
             zIndex: i + 10,
             top: i * (data.length + 100),
@@ -80,48 +97,18 @@ export default {
           }
         })
 
-        this.getImage(data[i].id)
         this.loaded = true
       }
-
-      // this.getImage(data[i].id)
-      /*    console.log(
-        this.projects.map((item) => [item.data.id, this.getImage(item.data.id)])
-      ) */
     },
 
-    /*    applyImages() {
-      for (let i = 0; i < this.projects.length; i++) {
-        if (this.covers.hasOwnProperty(this.projects[i].data.id)) {
-          console.log('sdfkgöoskfölsdkf', this.covers[this.projects[i].data.id])
-        }
-      }
-    }, */
-
     getImage(id) {
-      let cover = {}
-
-      // const project = this.projects.filter((item) => item.data.id === id)
-
+      // Apply images async
       ProjectsRepo.getCover(id).then((res) => {
-        if (res.data.data.cover && res.data.data.cover.data.thumbnails) {
-          // console.log(res.data.data.cover.data.thumbnails[0].url)
-          cover = res.data.data.cover.data.thumbnails[0].url
+        if (res) {
+          this.projects.filter((item) => item.data.id === id)[0].cover =
+            res.data.thumbnails[0].url
         }
-        this.covers[id] = cover
-
-        console.log(cover)
-        // project[0].cover = cover
-
-        // console.log(project)
-        // this.projects[id] = project[0]
-        // console.log(this.projects[id])
-        return cover
       })
-
-      this.loaded = true
-
-      console.log(this.projects)
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "lom-collage",
   "version": "1.0.0",
-  "description": "Draggable LOM Data UI to view annd build digital Collages",
+  "description": "Draggable LOM Data UI to view and build digital Collages",
   "author": "dev7ch",
   "private": true,
   "scripts": {
@@ -21,7 +21,6 @@
     }
   },
   "dependencies": {
-    "@dev7ch/vue-lom-window": "^0.0.7",
     "@nuxtjs/axios": "^5.3.6",
     "ant-design-vue": "^1.1.10",
     "nuxt": "^2.0.0"
@@ -29,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@dev7ch/lom-windows": "^0.3.0",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^0.2.1",
     "@vue/test-utils": "^1.0.0-beta.27",
@@ -46,6 +46,8 @@
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
     "vue-draggable-resizable": "^2.0.0-rc2",
     "vue-jest": "^3.0.3",
     "vue-zoomer": "^0.3.2"
