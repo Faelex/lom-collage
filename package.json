@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@dev7ch/lom-windows": "^0.3.0",
+    "@dev7ch/lom-windows": "^0.4.3",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^0.2.1",
     "@vue/test-utils": "^1.0.0-beta.27",

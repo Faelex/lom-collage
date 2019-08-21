@@ -1,49 +1,40 @@
 <template lang="html">
   <div id="app">
     <div class="window">
-      <lom-window-default>
-        <lom-window
-          v-for="(item, idx) in projects"
-          :key="idx"
-          :width="220"
-          :is-scrollable="true"
-          :title="item.data.title"
-          :resizable="true"
-          :min-width="250"
-          :min-height="250"
-          :max-width="640"
-          :max-height="480"
-          :close-button="true"
-          :is-open.sync="isOpen[idx]"
-        >
-          <div class="lom window-content">
-            <img
-              :key="idx + '-image'"
-              ondragstart="event.preventDefault();
+      <no-ssr>
+        <lom-window-default>
+          <lom-window
+            v-for="(item, idx) in projects"
+            :key="idx"
+            :width="220"
+            :is-scrollable="true"
+            :title="item.data.title"
+            :resizable="true"
+            :min-width="250"
+            :min-height="250"
+            :max-width="640"
+            :max-height="480"
+            :close-button="true"
+            :is-open.sync="isOpen[idx]"
+          >
+            <div class="lom window-content">
+              <img
+                :key="idx + '-image'"
+                ondragstart="event.preventDefault();
                         event.stopPropagation();"
-              :src="item.cover"
-            />
-            <a-collapse>
-              <a-collapse-panel key="1" header="This is panel header 1">
-                <p
-                  v-html="
-                    item.data.abstract
-                      ? item.data.abstract.slice(0, 300)
-                      : item.data.text.slice(0, 10)
-                  "
-                ></p> </a-collapse-panel
-              >>
-            </a-collapse>
-            <p
-              v-html="
-                item.data.abstract
-                  ? item.data.abstract.slice(0, 300)
-                  : item.data.text.slice(0, 10)
-              "
-            ></p>
-          </div>
-        </lom-window>
-      </lom-window-default>
+                :src="item.cover"
+              />
+              <p
+                v-html="
+                  item.data.abstract
+                    ? item.data.abstract.slice(0, 300)
+                    : item.data.text.slice(0, 10)
+                "
+              ></p>
+            </div>
+          </lom-window>
+        </lom-window-default>
+      </no-ssr>
     </div>
   </div>
 </template>

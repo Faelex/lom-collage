@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseDomain = 'https://d7api.campusderkuenste.ch'
+const baseDomain = 'https://api.dev7.ch'
 const baseURL = `${baseDomain}/lom/`
 
 export default axios.create({

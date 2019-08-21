@@ -4,7 +4,7 @@ export const state = {
 
 export const mutations = {
   add(state, res) {
-    if (res.length) {
+    if (res && res.length) {
       state.projects.push(...res)
       console.log('Projects  filled ...')
     }

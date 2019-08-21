@@ -731,10 +731,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@dev7ch/lom-windows@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@dev7ch/lom-windows/-/lom-windows-0.3.0.tgz#d306fef34c13ac7071fb183c786fb6df729f73fd"
-  integrity sha512-1tq+0H6N342zKCUiZdqz0kCy8suMxE5IWqP5xN2YOghSF6yjQ9dtJoU6tkeYLrTb3A+V69TORZEq8tW3f5y6lQ==
+"@dev7ch/lom-windows@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@dev7ch/lom-windows/-/lom-windows-0.4.3.tgz#02454a677614206b202eb05fd1ba254cdd0459b7"
+  integrity sha512-MqyrQBDC0BKhmrgCcR3CiflRTXfaJF0xfHCv+UBaFu3Nv56hqHtTbfBAQQ012E592lVxf2AHzYjIq4SjFYIYng==
   dependencies:
     core-js "^2.6.5"
     vue "^2.6.10"
